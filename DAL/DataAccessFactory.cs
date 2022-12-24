@@ -32,7 +32,10 @@ namespace DAL
         {
             return new DoctorRepo();
         }
-
+        public static IRepo<DoctorSchedule, int, DoctorSchedule> DoctorScheduleDataAccess()
+        {
+            return new DoctorScheduleRepo();
+        }
         //_______________________________________
         public static IRepo<Patient, int, Patient> PatientDataAccess()
         {
@@ -94,6 +97,7 @@ namespace DAL
         {
             return new TokenRepo();
         }
+       
         public static ListofID<Appointment,int> NewAppointmentDataAccess()
         {
             return new AppointmentRepo();

@@ -7,13 +7,13 @@ namespace DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class UsernameToEmail : IMigrationMetadata
+    public sealed partial class CreateTables : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(UsernameToEmail));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateTables));
         
         string IMigrationMetadata.Id
         {
-            get { return "202212230259539_UsernameToEmail"; }
+            get { return "202212240636135_CreateTables"; }
         }
         
         string IMigrationMetadata.Source

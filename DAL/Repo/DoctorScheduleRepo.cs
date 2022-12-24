@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class BedRepo : Repo, IRepo<Bed, int, Bed>, ListofID<Bed,int>
+    internal class DoctorScheduleRepo : Repo, IRepo<DoctorSchedule, int, DoctorSchedule>
     {
-        public Bed Add(Bed obj)
+        public DoctorSchedule Add(DoctorSchedule obj)
         {
-            db.Beds.Add(obj);
+            db.DoctorSchedules.Add(obj);
             if (db.SaveChanges() > 0)
             {
                 return obj;
@@ -22,7 +22,8 @@ namespace DAL.Repo
 
         public bool Delete(int id)
         {
-            db.Beds.Remove(Get(id));
+            var data = db.DoctorSchedules.Find(id);
+            db.DoctorSchedules.Remove(data);
             if (db.SaveChanges() > 0)
             {
                 return true;
@@ -30,34 +31,25 @@ namespace DAL.Repo
             return false;
         }
 
-        public List<Bed> Get()
+        public List<DoctorSchedule> Get()
         {
-            return db.Beds.ToList();
+            return db.DoctorSchedules.ToList();
         }
 
-        public Bed Get(int id)
+        public DoctorSchedule Get(int id)
         {
-            return db.Beds.Find(id);
+            return db.DoctorSchedules.Find(id);
         }
 
-        public Bed GetCategory(string category)
-        {
-            return db.Beds.FirstOrDefault(X => X.BedCategory.Equals(category));
-        }
-
-        public List<Bed> GetListOfId(int id)
-        {
-            return db.Beds.Where(X=>X.BedCategoryID.Equals(id)).ToList();
-        }
-
-        public Bed Update(Bed obj)
+        public DoctorSchedule Update(DoctorSchedule obj)
         {
             var data = Get(obj.Id);
             db.Entry(data).CurrentValues.SetValues(obj);
             if (db.SaveChanges() > 0)
             {
                 return obj;
-            }return null;
+            }
+            return null;
         }
     }
 }
