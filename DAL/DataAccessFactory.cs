@@ -28,6 +28,7 @@ namespace DAL
             return new DoctorRepo();
         }
         
+   
         public static QualicationCount<Doctor,string> DoctorQualicationCountDataAccess()
         {
             return new DoctorRepo();
@@ -63,6 +64,12 @@ namespace DAL
             return new AdminRepo();
         }
 
+
+        public static IncomeFromAppointment<Appointment, DateTime> IncomeFromAppointmentDataAccess()
+        {
+            return new AdminRepo();
+
+        }
         //_____________________________________________
         public static IRepo<Staff, int, Staff> StaffDataAccess()
         {

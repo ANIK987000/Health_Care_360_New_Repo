@@ -67,46 +67,15 @@
     <Compile Include="EF\Models\Staff.cs" />
     <Compile Include="EF\Models\Token.cs" />
     <Compile Include="Interfaces\AuthChecker.cs" />
+    <Compile Include="Interfaces\IncomeFromAppointment.cs" />
     <Compile Include="Interfaces\ListofID.cs" />
     <Compile Include="Interfaces\Auth.cs" />
     <Compile Include="Interfaces\CheckUp.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Interfaces\QualicationCount.cs" />
-    <Compile Include="Migrations\202212131350327_CreateSomeTables.cs" />
-    <Compile Include="Migrations\202212131350327_CreateSomeTables.designer.cs">
-      <DependentUpon>202212131350327_CreateSomeTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212161912142_CreateBedCategoryandAllotments.cs" />
-    <Compile Include="Migrations\202212161912142_CreateBedCategoryandAllotments.designer.cs">
-      <DependentUpon>202212161912142_CreateBedCategoryandAllotments.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212210758238_AddSomeColumns.cs" />
-    <Compile Include="Migrations\202212210758238_AddSomeColumns.designer.cs">
-      <DependentUpon>202212210758238_AddSomeColumns.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212220956122_TokenTableEmailSet.cs" />
-    <Compile Include="Migrations\202212220956122_TokenTableEmailSet.designer.cs">
-      <DependentUpon>202212220956122_TokenTableEmailSet.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212221100033_HospitalNameChangeToAdmin.cs" />
-    <Compile Include="Migrations\202212221100033_HospitalNameChangeToAdmin.designer.cs">
-      <DependentUpon>202212221100033_HospitalNameChangeToAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212221649261_TokenTypeAdd.cs" />
-    <Compile Include="Migrations\202212221649261_TokenTypeAdd.designer.cs">
-      <DependentUpon>202212221649261_TokenTypeAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212230259539_UsernameToEmail.cs" />
-    <Compile Include="Migrations\202212230259539_UsernameToEmail.designer.cs">
-      <DependentUpon>202212230259539_UsernameToEmail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212231709246_AddNoticeBoardTable.cs" />
-    <Compile Include="Migrations\202212231709246_AddNoticeBoardTable.designer.cs">
-      <DependentUpon>202212231709246_AddNoticeBoardTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202212231828202_UpdateAdminTable.cs" />
-    <Compile Include="Migrations\202212231828202_UpdateAdminTable.designer.cs">
-      <DependentUpon>202212231828202_UpdateAdminTable.cs</DependentUpon>
+    <Compile Include="Migrations\202212240638058_CreateAllTables.cs" />
+    <Compile Include="Migrations\202212240638058_CreateAllTables.designer.cs">
+      <DependentUpon>202212240638058_CreateAllTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,32 +99,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212131350327_CreateSomeTables.resx">
-      <DependentUpon>202212131350327_CreateSomeTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212161912142_CreateBedCategoryandAllotments.resx">
-      <DependentUpon>202212161912142_CreateBedCategoryandAllotments.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212210758238_AddSomeColumns.resx">
-      <DependentUpon>202212210758238_AddSomeColumns.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212220956122_TokenTableEmailSet.resx">
-      <DependentUpon>202212220956122_TokenTableEmailSet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212221100033_HospitalNameChangeToAdmin.resx">
-      <DependentUpon>202212221100033_HospitalNameChangeToAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212221649261_TokenTypeAdd.resx">
-      <DependentUpon>202212221649261_TokenTypeAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212230259539_UsernameToEmail.resx">
-      <DependentUpon>202212230259539_UsernameToEmail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212231709246_AddNoticeBoardTable.resx">
-      <DependentUpon>202212231709246_AddNoticeBoardTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202212231828202_UpdateAdminTable.resx">
-      <DependentUpon>202212231828202_UpdateAdminTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212240638058_CreateAllTables.resx">
+      <DependentUpon>202212240638058_CreateAllTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

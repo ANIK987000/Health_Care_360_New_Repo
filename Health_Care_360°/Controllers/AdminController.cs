@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Health_Care_360_.Controllers
 {
     [EnableCors("*", "*", "*")]
-    [Logged]
+    //[Logged]
     public class AdminController : ApiController
     {
 
@@ -156,6 +156,97 @@ namespace Health_Care_360_.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
         }
+
+        //___________________________________________________________________
+
+        [HttpGet]
+        [Route("api/income/from/appointment/for/today")]
+        public HttpResponseMessage GetIncomeFromAppointmentForToday()
+        {
+            try
+            {
+                //var dt = DateTime.Today.ToString() ;
+                var data = AdminService.GetIncomeFromAppointment(DateTime.Today);
+                int count = 0;
+                foreach (var income in data)
+                {
+                    count += Int32.Parse(income.AppointmentFee);
+                }
+
+                List<int> numberList = new List<int>() { count };
+                return Request.CreateResponse(HttpStatusCode.OK, numberList);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+
+        //________________________________________________________________
+
+        [HttpGet]
+        [Route("api/income/from/appointment/for/last/seven/days")]
+        public HttpResponseMessage GetIncomeFromAppointmentForLastSevenDays()
+        {
+            try
+            {
+                //var dt = DateTime.Today.ToString() ;
+                var data = AdminService.GetIncomeFromAppointment(DateTime.Today);
+                var data1 = AdminService.GetIncomeFromAppointment(DateTime.Today.AddDays(-1));
+                var data2 = AdminService.GetIncomeFromAppointment(DateTime.Today.AddDays(-2));
+                var data3 = AdminService.GetIncomeFromAppointment(DateTime.Today.AddDays(-3));
+                var data4 = AdminService.GetIncomeFromAppointment(DateTime.Today.AddDays(-4));
+                var data5 = AdminService.GetIncomeFromAppointment(DateTime.Today.AddDays(-5));
+                var data6 = AdminService.GetIncomeFromAppointment(DateTime.Today.AddDays(-6));
+                int count = 0;
+                int count1 = 0;
+                int count2 = 0;
+                int count3 = 0;
+                int count4 = 0;
+                int count5 = 0;
+                int count6 = 0;
+                foreach (var income in data)
+                {
+                    count += Int32.Parse(income.AppointmentFee);
+                }
+                foreach (var income in data1)
+                {
+                    count1 += Int32.Parse(income.AppointmentFee);
+                }
+                foreach (var income in data2)
+                {
+                    count2 += Int32.Parse(income.AppointmentFee);
+                }
+                foreach (var income in data3)
+                {
+                    count3 += Int32.Parse(income.AppointmentFee);
+                }
+                foreach (var income in data4)
+                {
+                    count4 += Int32.Parse(income.AppointmentFee);
+                }
+                foreach (var income in data5)
+                {
+                    count5 += Int32.Parse(income.AppointmentFee);
+                }
+                foreach (var income in data6)
+                {
+                    count6 += Int32.Parse(income.AppointmentFee);
+                }
+             
+
+                List<int> numberList = new List<int>() { count, count1, count2, count3, count4, count5, count6 };
+                return Request.CreateResponse(HttpStatusCode.OK, numberList);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+
+
+        //_____________________________________________________________________
 
         [HttpGet]
         [Route("api/admin/get/{email}")]

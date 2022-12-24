@@ -25,6 +25,9 @@ namespace DAL.EF.Models
         public int DoctorID { get; set; }
         [Required,StringLength(100)]
         public string DoctorName { get; set; }
+         [Required]
+        [StringLength(50)]
+        public string AppointmentFee { get; set; }
         public virtual Doctor Doctors { get; set; }
         public virtual Patient Patients { get; set; }
     }

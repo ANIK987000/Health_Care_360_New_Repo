@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace DAL.Repo
 {
-    internal class AdminRepo :Repo, IRepo<Admin, int, Admin>,Auth<Admin, int>,AuthChecker<Admin, string>
+    internal class AdminRepo :Repo, IRepo<Admin, int, Admin>,Auth<Admin, int>,AuthChecker<Admin, string>,IncomeFromAppointment<Appointment,DateTime>
     {
         public Admin Add(Admin obj)
         {
@@ -56,6 +56,12 @@ namespace DAL.Repo
         public Admin GetChecker(string name)
         {
             var obj = db.Admins.FirstOrDefault(x => x.Name.Equals(name));
+            return obj;
+        }
+
+        public List<Appointment> GetIncomeFromAppointment(DateTime dt)
+        {
+            var obj = db.Appointments.Where(x => x.AppointCreateDate.Equals(dt)).ToList();
             return obj;
         }
 

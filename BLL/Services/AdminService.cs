@@ -80,5 +80,19 @@ namespace BLL.Services
             return mapper.Map<AdminDTO>(data);
         }
 
+
+        //______________________________________________
+
+        public static List<AppointmentDTO> GetIncomeFromAppointment(DateTime dt)
+        {
+            var data = DataAccessFactory.IncomeFromAppointmentDataAccess().GetIncomeFromAppointment(dt);
+
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<Appointment, AppointmentDTO>();
+            });
+            var mapper = new Mapper(config);
+            return mapper.Map<List<AppointmentDTO>>(data);
+        }
+
     }
 }
