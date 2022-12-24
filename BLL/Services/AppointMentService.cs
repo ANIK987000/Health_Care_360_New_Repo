@@ -18,26 +18,26 @@ namespace BLL.Services
             var mapper = new Mapper(config);
             var data = DataAccessFactory.DoctorAuthDataAccess().Doctors(name);
             var addappointment = new Appointment();
-            addappointment.PatientID=appointment.PatientID;
-            addappointment.PatientName= appointment.PatientName;
-            addappointment.AppointCreateDate= DateTime.Now;
-            addappointment.DoctorID=data.ID;
-            addappointment.DoctorName=data.Name;
-            addappointment.Status=appointment.Status;
+            addappointment.ScheduleID = appointment.ScheduleID;
+            addappointment.PatientID = appointment.PatientID;
+            addappointment.PatientName = appointment.PatientName;
+            addappointment.AppointCreateDate = DateTime.Now;
+            addappointment.DoctorID = data.ID;
+            addappointment.DoctorName = data.Name;
+            addappointment.Status = appointment.Status;
             var access = DataAccessFactory.AppointmentDataAccess().Add(addappointment);
-            if(access != null)
+            if (access != null)
             {
                 return mapper.Map<AppointmentDTO>(access);
-            }return null;
+            }
+            return null;
         }
-        public static List<AppointmentDTO> ShowAppointments(string name)
+        public static List<AppointmentDTO> ShowAppointments(int id)
         {
-                var data = DataAccessFactory.DoctorAuthDataAccess().Doctors(name);
-                var appDoc = DataAccessFactory.NewAppointmentDataAccess().GetListOfId(data.ID);
-                var config = Service.OneTimeMapping<Appointment, AppointmentDTO>();
-                var mapper = new Mapper(config);             
-                return mapper.Map<List<AppointmentDTO>>(appDoc);          
-                
+            var appDoc = DataAccessFactory.NewAppointmentDataAccess().GetListOfId(id);
+            var config = Service.OneTimeMapping<Appointment, AppointmentDTO>();
+            var mapper = new Mapper(config);
+            return mapper.Map<List<AppointmentDTO>>(appDoc);
         }
         public static AppointmentDTO Get(int id)
         {

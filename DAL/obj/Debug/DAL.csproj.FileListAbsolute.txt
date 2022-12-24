@@ -84,3 +84,17 @@ E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder
 E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.UsernameToEmail.resources
 E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.AddNoticeBoardTable.resources
 E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.UpdateAdminTable.resources
+E:\.net\Health_Care_360_New_Repo\DAL\bin\Debug\DAL.dll.config
+E:\.net\Health_Care_360_New_Repo\DAL\bin\Debug\DAL.dll
+E:\.net\Health_Care_360_New_Repo\DAL\bin\Debug\DAL.pdb
+E:\.net\Health_Care_360_New_Repo\DAL\bin\Debug\EntityFramework.dll
+E:\.net\Health_Care_360_New_Repo\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\.net\Health_Care_360_New_Repo\DAL\bin\Debug\EntityFramework.xml
+E:\.net\Health_Care_360_New_Repo\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.dll
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.pdb
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.Migrations.CreateTables.resources
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.csproj.GenerateResource.cache

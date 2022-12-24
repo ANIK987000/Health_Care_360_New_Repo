@@ -17,8 +17,16 @@ namespace Health_Care_360_.Controllers
         [Route("api/AppointMent/{id}")]
         public HttpResponseMessage AddPatientCheckupDetails()
         {
-            var data = MedicineService.Get();
-            return Request.CreateResponse(HttpStatusCode.OK, data);
+            try
+            {
+                var data = MedicineService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch(Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex);
+            }
+           
         }
         [Logged]
         [HttpPost]

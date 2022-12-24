@@ -22,7 +22,7 @@ namespace DAL.EF
         public DbSet<BedCategory> BedCategories { get; set; }
         public DbSet<Bed> Beds { get; set; }
         public DbSet<BedAllotment> BedAllotments { get; set; }
-
+        public DbSet<DoctorSchedule> DoctorSchedules { get; set; }
         //public DbSet<HospitalDoctor> HospitalDoctors { get; set; }
         //public DbSet<HospitalStaff> HospitalStaffs { get; set; }
     }
