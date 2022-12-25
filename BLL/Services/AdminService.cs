@@ -94,5 +94,18 @@ namespace BLL.Services
             return mapper.Map<List<AppointmentDTO>>(data);
         }
 
+        //__________________________________________________
+
+        public static List<MedicalStoreDTO> GetIncomeFromMedicalStore(DateTime dt)
+        {
+            var data = DataAccessFactory.IncomeFromMedicalStoreDataAccess().GetIncomeFromMedicalStore(dt);
+
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<MedicalStore, MedicalStoreDTO>();
+            });
+            var mapper = new Mapper(config);
+            return mapper.Map<List<MedicalStoreDTO>>(data);
+        }
+
     }
 }

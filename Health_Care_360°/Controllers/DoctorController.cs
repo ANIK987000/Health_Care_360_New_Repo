@@ -13,7 +13,7 @@ using System.Xml.Linq;
 namespace Health_Care_360_.Controllers
 {
     [EnableCors("*","*","*")]
-   // [Logged]
+    [Logged]
     public class DoctorController : ApiController
     {
         

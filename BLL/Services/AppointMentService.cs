@@ -53,5 +53,15 @@ namespace BLL.Services
             var mapper = new Mapper(config);
             return mapper.Map<AppointmentDTO>(data);
         }
+        public static List<AppointmentDTO> GetAppointment()
+        {
+            var data = DataAccessFactory.AppointmentDataAccess().Get();
+            //var config= Service.OneTimeMapping<Doctor, DoctorDTO>();
+            var config = new MapperConfiguration(cfg => {
+                cfg.CreateMap<Appointment, AppointmentDTO>();
+            });
+            var mapper = new Mapper(config);
+            return mapper.Map<List<AppointmentDTO>>(data);
+        }
     }
 }

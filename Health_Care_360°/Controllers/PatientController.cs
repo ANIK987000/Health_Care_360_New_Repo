@@ -12,7 +12,7 @@ using System.Web.Http.Cors;
 namespace Health_Care_360_.Controllers
 {
     [EnableCors("*", "*", "*")]
-    //[Logged]
+    [Logged]
     public class PatientController : ApiController
     {
 

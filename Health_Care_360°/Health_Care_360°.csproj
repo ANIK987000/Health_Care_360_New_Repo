@@ -99,11 +99,13 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Auth\Logged.cs" />
+    <Compile Include="Auth\ValidateModelAttribute.cs" />
     <Compile Include="Controllers\AppointMentController.cs" />
     <Compile Include="Controllers\BedController.cs" />
     <Compile Include="Controllers\DoctorController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MedicalStoreController.cs" />
     <Compile Include="Controllers\NoticeBoardController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Controllers\StaffController.cs" />

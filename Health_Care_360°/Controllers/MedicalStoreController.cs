@@ -1,6 +1,5 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
-using Health_Care_360_.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,19 +11,19 @@ using System.Web.Http.Cors;
 namespace Health_Care_360_.Controllers
 {
     [EnableCors("*", "*", "*")]
-    [Logged]
-    public class NoticeBoardController : ApiController
+    public class MedicalStoreController : ApiController
     {
 
         [HttpPost]
-        [Route("api/notice/add")]
-        public HttpResponseMessage Register(NoticeBoardDTO noticeBoardDTO)
+        [Route("api/medical/store/data/add")]
+        //[ValidateModel]
+        public HttpResponseMessage Register(MedicalStoreDTO medicalStoreDTO)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var data = NoticeBoardService.Add(noticeBoardDTO);
+                    var data = MedicalStoreService.Add(medicalStoreDTO);
                     return Request.CreateResponse(HttpStatusCode.OK, data);
                 }
                 return Request.CreateResponse(HttpStatusCode.NoContent);
@@ -40,12 +39,12 @@ namespace Health_Care_360_.Controllers
 
 
         [HttpGet]
-        [Route("api/notice/list")]
-        public HttpResponseMessage GetAllNotices()
+        [Route("api/medical/store/data/list")]
+        public HttpResponseMessage GetAllMedicalStoreData()
         {
             try
             {
-                var data = NoticeBoardService.Get();
+                var data = MedicalStoreService.Get();
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -57,12 +56,12 @@ namespace Health_Care_360_.Controllers
         }
 
         [HttpGet]
-        [Route("api/notice/{id}")]
-        public HttpResponseMessage GetSinglNotice(int id)
+        [Route("api/medical/store/data/{id}")]
+        public HttpResponseMessage GetSinglMedicalStoreData(int id)
         {
             try
             {
-                var data = NoticeBoardService.Get(id);
+                var data = MedicalStoreService.Get(id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -75,12 +74,12 @@ namespace Health_Care_360_.Controllers
 
 
         [HttpPost]
-        [Route("api/notice/delete/{id}")]
-        public HttpResponseMessage DeleteNotice(/*DoctorDTO doctor*/ int id)
+        [Route("api/medical/store/data/delete/{id}")]
+        public HttpResponseMessage DeleteMedicalStoreData(/*DoctorDTO doctor*/ int id)
         {
             try
             {
-                var data = NoticeBoardService.Delete(id);
+                var data = MedicalStoreService.Delete(id);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)
@@ -93,12 +92,12 @@ namespace Health_Care_360_.Controllers
 
 
         [HttpPost]
-        [Route("api/notice/update")]
-        public HttpResponseMessage UpdateNotice(NoticeBoardDTO noticeBoardDTO)
+        [Route("api/medical/store/data/update")]
+        public HttpResponseMessage UpdateMedicalStoreData(MedicalStoreDTO medicalStoreDTO)
         {
             try
             {
-                var data = NoticeBoardService.Update(noticeBoardDTO);
+                var data = MedicalStoreService.Update(medicalStoreDTO);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)

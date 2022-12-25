@@ -70,6 +70,11 @@ namespace DAL
             return new AdminRepo();
 
         }
+
+        public static IncomeFromMedicalStore<MedicalStore,DateTime> IncomeFromMedicalStoreDataAccess()
+        {
+            return new AdminRepo();
+        }
         //_____________________________________________
         public static IRepo<Staff, int, Staff> StaffDataAccess()
         {
@@ -90,6 +95,12 @@ namespace DAL
         public static IRepo<NoticeBoard,int,NoticeBoard> NoticeBoardDataAccess()
         {
             return new NoticeBoardRepo();
+
+        }
+
+        public static IRepo<MedicalStore,int,MedicalStore> MedicalStoreDataAccess()
+        {
+            return new MedicalStoreRepo();
         }
 
         //______________________________________________________

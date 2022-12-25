@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Health_Care_360_.Auth;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -13,6 +14,8 @@ namespace Health_Care_360_
             // Web API configuration and services
 
             // Web API routes
+            config.Filters.Add(new ValidateModelAttribute());
+
             config.MapHttpAttributeRoutes();
            
             config.Routes.MapHttpRoute(

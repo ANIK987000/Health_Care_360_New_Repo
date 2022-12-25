@@ -76,3 +76,4 @@ E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder
 E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.pdb
 E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.CreateAllTables.resources
 E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+E:\Advanced Programming With .Net\Final\Health_Care_360_Final_Project\New folder\Health_Care-_360-_Back_End\DAL\obj\Debug\DAL.Migrations.AddMedicalStoreTable.resources
