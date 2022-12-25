@@ -125,8 +125,20 @@ namespace Health_Care_360_.Controllers
 
 
         }
-
-
+        [HttpGet]
+        [Route("api/Patient/Bill/{name}")]
+        public HttpResponseMessage TotalBills(string name)
+        {
+            try
+            {
+                var data = PatientService.GetBills(name);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch(Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.Ambiguous,ex);
+            }
+        }
 
     }
 }

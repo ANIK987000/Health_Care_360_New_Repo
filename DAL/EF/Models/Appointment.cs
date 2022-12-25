@@ -29,5 +29,10 @@ namespace DAL.EF.Models
         public string DoctorName { get; set; }
         public virtual DoctorSchedule DoctorSchedules { get; set; }
         public virtual Patient Patients { get; set; }
+        public virtual List<PatientCheckUp> PatientCheckUps { get; set; }
+        public Appointment()
+        {
+            this.PatientCheckUps = new List<PatientCheckUp>();
+        }
     }
 }

@@ -160,7 +160,7 @@ namespace Health_Care_360_.Controllers
 
 
         }
-        [Logged]
+        //[Logged]
         [HttpGet]
         [Route("api/Doctor/{name}")]
         public HttpResponseMessage AllAppointment(string name)
@@ -177,7 +177,7 @@ namespace Health_Care_360_.Controllers
                 
             
         }
-        [Logged]
+        //[Logged]
         [Route("api/Doctor/Appointment/{id}")]
         [HttpGet]
         public HttpResponseMessage GetAppointments(int id)
@@ -192,7 +192,7 @@ namespace Health_Care_360_.Controllers
                 return Request.CreateResponse(HttpStatusCode.ExpectationFailed, ex);
             }
         }
-        [Logged]
+        //[Logged]
         [HttpGet]
         [Route("api/Doctor/AddAppointment/{name}")]
         public HttpResponseMessage AddAppointment()
@@ -209,7 +209,7 @@ namespace Health_Care_360_.Controllers
 
 
         }
-        [Logged]
+        //[Logged]
         [HttpPost]
         [Route("api/Doctor/AddAppointment/{name}")]
         public HttpResponseMessage AddAppointment(AppointmentDTO appointment, string name)

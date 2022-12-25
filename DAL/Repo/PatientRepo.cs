@@ -67,8 +67,8 @@ namespace DAL.Repo
 
         public Patient GetChecker(string name)
         {
-            var obj = db.Patients.FirstOrDefault(x => x.Name.Equals(name));
-            return obj;
+            return db.Patients.FirstOrDefault(x => x.Name.Equals(name));
+           
         }
     }
 }

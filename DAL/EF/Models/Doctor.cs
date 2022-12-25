@@ -45,6 +45,7 @@ namespace DAL.EF.Models
             this.DoctorPatients= new List<DoctorPatient>();*/
             //this.Appointments = new List<Appointment>();
             //this.PatientCheckUps = new List<PatientCheckUp>();
+            this.DoctorSchedules= new List<DoctorSchedule>();
         }
         public virtual List<DoctorSchedule> DoctorSchedules { get; set; }
         //public virtual List<Appointment> Appointments { get; set; }

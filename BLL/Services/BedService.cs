@@ -33,6 +33,7 @@ namespace BLL.Services
         }
         public static BedDTO AddBedsInCategory(BedDTO beds)
         {
+            //Changes need . need to set the bed as Vacant
             var config = Service.Mapping<BedDTO, Bed>();
             var mapper = new Mapper(config);
             var map = mapper.Map<Bed>(beds);

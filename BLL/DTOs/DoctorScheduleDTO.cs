@@ -14,6 +14,6 @@ namespace BLL.DTOs
         public string Qualification { get; set; }
         public System.DateTime CheckUpTimeStart { get; set; }
         public System.DateTime CheckUpTimeEnd { get; set; }
-        public System.DateTime WeekDay { get; set; }
+        public string WeekDay { get; set; }
     }
 }

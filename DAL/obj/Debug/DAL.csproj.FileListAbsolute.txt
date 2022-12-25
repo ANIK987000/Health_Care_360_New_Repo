@@ -98,3 +98,7 @@ E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.dll
 E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.pdb
 E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.Migrations.CreateTables.resources
 E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.Migrations.CreateScheduleRltn.resources
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.Migrations.Create_newColumn.resources
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.Migrations.CreateRealtionWithCheckup.resources
+E:\.net\Health_Care_360_New_Repo\DAL\obj\Debug\DAL.Migrations.CreateTestListTables.resources

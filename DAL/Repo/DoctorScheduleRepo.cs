@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DAL.Repo
 {
-    internal class DoctorScheduleRepo : Repo, IRepo<DoctorSchedule, int, DoctorSchedule>
+    internal class DoctorScheduleRepo : Repo, IRepo<DoctorSchedule, int, DoctorSchedule>, ScheduleChecker<DoctorSchedule,string>
     {
         public DoctorSchedule Add(DoctorSchedule obj)
         {
@@ -18,6 +19,11 @@ namespace DAL.Repo
                 return obj;
             }
             return null;
+        }
+
+        public List<DoctorSchedule> data(string data)
+        {
+            return db.DoctorSchedules.Where(x => x.DoctorName.Equals(data)).ToList();
         }
 
         public bool Delete(int id)
@@ -39,6 +45,11 @@ namespace DAL.Repo
         public DoctorSchedule Get(int id)
         {
             return db.DoctorSchedules.Find(id);
+        }
+
+        public DoctorSchedule Schedule(string data)
+        {
+            return db.DoctorSchedules.FirstOrDefault(x => x.DoctorName.Equals(data));
         }
 
         public DoctorSchedule Update(DoctorSchedule obj)

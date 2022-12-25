@@ -14,7 +14,6 @@ namespace BLL.DTOs
         public System.DateTime AppointCreateDate { get; set; }
         public int DoctorID { get; set; }
         public string DoctorName { get; set; }
-        public string DoctorQualification { get; set; }
         public string Status { get; set; }
     }
 }

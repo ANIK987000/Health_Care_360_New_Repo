@@ -12,7 +12,7 @@ namespace Health_Care_360_.Controllers
 {
     public class AppointMentController : ApiController
     {
-        [Logged]
+        //[Logged]
         [HttpGet]
         [Route("api/AppointMent/{id}")]
         public HttpResponseMessage AddPatientCheckupDetails()
@@ -28,7 +28,7 @@ namespace Health_Care_360_.Controllers
             }
            
         }
-        [Logged]
+        //[Logged]
         [HttpPost]
         [Route("api/AppointMent/{id}")]
         public HttpResponseMessage AddPatientCheckupDetails(PatientCheckUpDTO patientCheckUp,int id)
@@ -50,7 +50,7 @@ namespace Health_Care_360_.Controllers
         }
         [Logged]
         [HttpGet]
-        [Route("api/AppointMent/patientDetails/{id}")]
+        [Route("api/AppointMent/PrescriptionDetails/{id}")]
         public HttpResponseMessage SeePatientCheckupDetails(int id)
         {
             var data = PatientCheckUpService.Get(id);

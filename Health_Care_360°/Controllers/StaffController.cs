@@ -152,5 +152,84 @@ namespace Health_Care_360_.Controllers
                 return Request.CreateResponse(HttpStatusCode.NoContent,ex);
             }
         }
+        //--------------Manipulate Lab Tests----------
+        [HttpGet]
+        [Route("api/Staff/SeeTestList")]
+        public HttpResponseMessage TestLists()
+        {
+            try
+            {
+                var data = ListService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK,data);
+            }
+            catch(Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.Ambiguous, ex);
+            }
+        }
+        [HttpPost]
+        [Route("api/Staff/AddTestList")]
+        public HttpResponseMessage AddTestList(TestListDTO testList)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var data = ListService.Add(testList);
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                return Request.CreateResponse(HttpStatusCode.Forbidden,ModelState);
+            }
+            catch(Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }
+        [HttpGet]
+        [Route("api/Staff/SeeLabTest")]
+        public HttpResponseMessage SeeLabratoryTests()
+        {
+            try
+            {
+                var data = LabratoryService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch(Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.Ambiguous, ex);
+            }
+        }
+        [HttpGet]
+        [Route("api/Staff/AddLabTest/{id}")]
+        public HttpResponseMessage AddLabratoryTests()
+        {
+            try
+            {
+                var data = PatientService.Get();
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.Ambiguous, ex);
+            }
+        }
+        [HttpPost]
+        [Route("api/Staff/AddLabTest/{id}")]
+        public HttpResponseMessage AddLabratoryTests(LabratoryDTO labratory,int id)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var data = LabratoryService.Add(labratory,id) ;
+                    return Request.CreateResponse(HttpStatusCode.OK, data);
+                }
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.Ambiguous, ex);
+            }
+        }
     }
 }
