@@ -23,7 +23,7 @@ namespace DAL.EF.Models
         [Required]
         public System.DateTime CheckUpTimeEnd { get; set; }
         [Required]
-        public System.DateTime WeekDay { get; set; }
+        public string WeekDay { get; set; }
         public virtual Doctor Doctors { get; set; }
         public virtual List<Appointment> Appointments { get; set; }
         public DoctorSchedule()

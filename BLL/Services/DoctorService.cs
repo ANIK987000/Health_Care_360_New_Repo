@@ -17,11 +17,16 @@ namespace BLL.Services
             var config = Service.Mapping<DoctorDTO, Doctor>();
             var mapper=new Mapper(config);
             var data=mapper.Map<Doctor>(doctor);
-            var repo = DataAccessFactory.DoctorDataAccess().Add(data);
-            if (repo != null)
+            var check = DataAccessFactory.DoctorAuthDataAccess().Doctors(data.Name);
+            if(check == null)
             {
-                return mapper.Map<DoctorDTO>(repo);
+                var repo = DataAccessFactory.DoctorDataAccess().Add(data);
+                if (repo != null)
+                {
+                    return mapper.Map<DoctorDTO>(repo);
+                }
             }
+            
             return null;
         }
         public static List<DoctorDTO> Get()

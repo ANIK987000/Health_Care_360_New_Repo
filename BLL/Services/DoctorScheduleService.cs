@@ -16,7 +16,6 @@ namespace BLL.Services
         {
             var config = Service.Mapping<DoctorScheduleDTO, DoctorSchedule>();
             var mapper = new Mapper(config);
-
             var data = mapper.Map<DoctorSchedule>(doctor);
             var repo = DataAccessFactory.DoctorScheduleDataAccess().Add(data);
             if (repo != null)
@@ -37,7 +36,7 @@ namespace BLL.Services
         }
         public static List<DoctorScheduleDTO> Get(string name)
         {
-            var data = DataAccessFactory.DoctorAuthDataAccess().Doctors(name);
+            var data = DataAccessFactory.DoctorAuthSchCheckerDataAccess().data(name);
             var config = Service.OneTimeMapping<DoctorSchedule, DoctorScheduleDTO>();
             /*var config = new MapperConfiguration(cfg => {
                 cfg.CreateMap<DoctorSchedule, DoctorScheduleDTO>();

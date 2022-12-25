@@ -27,7 +27,10 @@ namespace DAL
         {
             return new DoctorRepo();
         }
-        
+        public static ScheduleChecker<DoctorSchedule, string> DoctorAuthSchCheckerDataAccess()
+        {
+            return new DoctorScheduleRepo();
+        }
         public static QualicationCount<Doctor,string> DoctorQualicationCountDataAccess()
         {
             return new DoctorRepo();
@@ -97,10 +100,25 @@ namespace DAL
         {
             return new TokenRepo();
         }
-       
+        public static ErrorReturn Error()
+        {
+            return new ErrorRepo();
+        }
+        public static IRepo<TestList,int ,TestList> TestDataAccess()
+        {
+            return new TestRepo();
+        }
+        public static IRepo<Labratory,int,Labratory> LabratoryDataAccess()
+        {
+            return new LabratoryRepo();
+        }
         public static ListofID<Appointment,int> NewAppointmentDataAccess()
         {
             return new AppointmentRepo();
+        }
+        public static BillManagement<Labratory> BillDataAccess()
+        {
+            return new LabratoryRepo();
         }
         public static ListofID<Bed, int> BedListDataAccess()
         {
